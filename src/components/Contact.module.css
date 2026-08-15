@@ -1,0 +1,137 @@
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactInfo {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.contactInfo p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-grow: 1;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: var(--primary);
+}
+
+.resumeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0;
+  background: var(--bg-panel);
+  color: var(--accent);
+  border: 1px solid var(--primary-dim);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.resumeBtn:hover {
+  background: var(--bg-panel);
+  transform: translateY(-2px);
+}
+
+.contactForm {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  background: var(--bg-panel);
+  border: 1px solid var(--primary-dim);
+  border-radius: 0;
+  padding: 1rem;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--bg-panel);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--primary);
+  color: #000;
+  border-radius: 0;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+@media (max-width: 850px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+  }
+}

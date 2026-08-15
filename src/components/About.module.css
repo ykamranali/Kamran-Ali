@@ -1,0 +1,118 @@
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.textContent strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--primary);
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
+.visualContent .glass-panel {
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.visualContent .glass-panel::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.coreFocus {
+  position: relative;
+  z-index: 1;
+}
+
+.coreFocus h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+.focusList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.focusItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.focusIcon {
+  color: var(--primary);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.focusItem h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.focusItem p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
